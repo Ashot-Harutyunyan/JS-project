@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+nav {
+  height: 70px;
+  background-color: grey;
+  text-align: right;
+  padding-inline: 30px;
+  line-height: 70px;
+}
+nav button {
+  font-size: 18px;
+  width: 200px;
+  height: 35px;
+}
+
+.forFoto {
+  width: clamp(380px, 30vw, 500px);
+  overflow: hidden;
+  display: inline-block;
+}
+
+.veil {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.foto {
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+img {
+  width: clamp(380px, 30vw, 500px);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: translate 450ms;
+}
+
+.container {
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  margin: 0 auto;
+  font-size: 0;
+}
+.container i {
+  position: absolute;
+  z-index: 1;
+  font-size: 50px;
+  top: 40%;
+  color: #646464;
+  cursor: pointer;
+}
+.container i:first-of-type {
+  left: -50px;
+}
+.container i:last-of-type {
+  right: -50px;
+}
+.container i:hover {
+  color: green;
+}
+.container i:active {
+  color: lime;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 35px;
+  position: relative;
+  z-index: 3;
+}
+
+.dot {
+  margin-top: 20px;
+  padding: 5px;
+  font-size: clamp(19px, 4vw, 25px);
+  color: #646464;
+  cursor: pointer;
+  animation: dotrot 20000ms linear infinite;
+}
+.dot:hover {
+  color: green;
+}
+.dot:active {
+  color: lime;
+}
+.dot.selected {
+  color: lime;
+}
+
+@keyframes dotrot {
+  to {
+    transform: rotate(var(--rotatio, 360deg));
+  }
+}
+.info {
+  padding: 15px;
+  display: inline-block;
+}
+.info h2 {
+  font-size: clamp(20px, 4vw, 27px);
+  padding-bottom: 5px;
+}
+.info p {
+  font-size: clamp(16px, 3vw, 20px);
+  padding-bottom: 5px;
+}
+.info span {
+  font-size: clamp(16px, 3vw, 20px);
+  padding-bottom: 5px;
+}
+
+dialog {
+  top: 60px;
+  z-index: 2;
+  margin: auto;
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+  min-height: 300px;
+}
+dialog form > input {
+  display: block;
+  width: 100%;
+  margin-block: 5px;
+  height: 40px;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.face {
+  text-align: center;
+}
+
+::backdrop {
+  background-color: rgba(0, 0, 255, 0.151);
+}
+
+.divGo {
+  margin: 0 auto;
+  width: clamp(380px, 30vw, 500px);
+  font-size: 0;
+}
+
+.infoDog {
+  width: 75%;
+  height: clamp(20px, 10vw, 40px);
+  font-size: 18px;
+  padding: 8px;
+}
+
+.ser {
+  width: 25%;
+  height: clamp(20px, 10vw, 40px);
+  font-size: 18px;
+}
+
+.shopping {
+  font-size: clamp(80px, 15vw, 100px);
+  color: rgba(232, 18, 18, 0.9058823529);
+  margin-right: 15px;
+}
+
+.addTo {
+  width: clamp(150px, 20vw, 250px);
+  height: clamp(35px, 10vw, 50px);
+  font-size: clamp(16px, 3vw, 20px);
+  margin-top: 25px;
+  margin-left: 15px;
+}
+
+.soo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.cart {
+  width: 360px;
+  height: 220px;
+  border: 2px solid red;
+  margin-right: 130px;
+  position: fixed;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-bottom: 35px;
+  display: none;
+}
+.cart .total {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+}
+.cart .content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden auto;
+}
+
+.cartItemdiv {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.cartItemdiv img {
+  width: 60px;
+}
+
+.cart2 {
+  display: block;
+}
+
+.dogBasket {
+  text-align: right;
+  margin-right: 10px;
+  font-size: clamp(14px, 2vw, 18px);
+  color: blue;
+}/*# sourceMappingURL=style.css.map */
